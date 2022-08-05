@@ -1,6 +1,5 @@
 #pragma once
-
-#include "opencv/cv.h"
+#include<opencv2/opencv.hpp>
 
 /*
  Author: Nicolò Castellazzi https://github.com/nicast

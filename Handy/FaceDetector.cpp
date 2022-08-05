@@ -1,5 +1,12 @@
 #include "FaceDetector.h"
-#include"opencv2\opencv.hpp"
+#include<opencv2/core.hpp>
+#include<opencv2/opencv.hpp>
+#include<opencv2/imgproc/imgproc.hpp>
+#include<opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/types_c.h>
+
+
+using namespace cv;
 
 /*
  Author: Pierfrancesco Soffritti https://github.com/PierfrancescoSoffritti
@@ -22,7 +29,7 @@ void FaceDetector::removeFaces(Mat input, Mat output) {
 	cvtColor(input, frameGray, CV_BGR2GRAY);
 	equalizeHist(frameGray, frameGray);
 
-	faceCascadeClassifier.detectMultiScale(frameGray, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, Size(120, 120));
+	faceCascadeClassifier.detectMultiScale(frameGray, faces, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(120, 120));
 
 	for (size_t i = 0; i < faces.size(); i++) {
 		rectangle(
@@ -42,7 +49,7 @@ Rect getFaceRect(Mat input) {
 	cvtColor(input, inputGray, CV_BGR2GRAY);
 	equalizeHist(inputGray, inputGray);
 
-	faceCascadeClassifier.detectMultiScale(inputGray, faceRectangles, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, Size(120, 120));
+	faceCascadeClassifier.detectMultiScale(inputGray, faceRectangles, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(120, 120));
 
 	if (faceRectangles.size() > 0)
 		return faceRectangles[0];

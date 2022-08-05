@@ -14,8 +14,8 @@ using namespace cv;
 using namespace std;
 
 int main(int, char**) {
-	VideoCapture videoCapture(0);
-	videoCapture.set(CV_CAP_PROP_SETTINGS, 1);
+	VideoCapture videoCapture(CAP_DSHOW);
+	videoCapture.set(CAP_PROP_SETTINGS, 1);
 
 	if (!videoCapture.isOpened()) {
 		cout << "Can't find camera!" << endl;

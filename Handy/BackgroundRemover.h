@@ -1,6 +1,6 @@
 #pragma once
 
-#include<opencv\cv.h>
+#include<opencv2/opencv.hpp>
 
 /*
  Author: Pierfrancesco Soffritti https://github.com/PierfrancescoSoffritti
