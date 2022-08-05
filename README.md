@@ -1,5 +1,5 @@
 # Handy
-Handy is a hand detection software written in C++ using OpenCV v3.4.1. The software is capable of recognizing hands in an video and of counting the number of lifted fingers.
+Handy is a hand detection software written in C++ using OpenCV v4.2. The software is capable of recognizing hands in an video and of counting the number of lifted fingers.
 
 ## Software assumptions
 A few assumptions have been made:
@@ -15,7 +15,7 @@ A demo can be watched [here](https://www.youtube.com/watch?v=z8rWGQyIQAE).
 ![gif demo](https://j.gifs.com/pQmJ8m.gif)
 
 ## Usage
-This software has been developed on Visual Studio 14 using OpenCV v3.4.1. If you are using the same development environment you can simply clone the project and open it in Visual Studio.
+This software has been developed on Visual Studio 14 using OpenCV v4.2. If you are using the same development environment you can simply clone the project and open it in Visual Studio.
 
 Remember to create an environment variable called `OPENCV_PATH` that points to the build folder of OpenCV (eg: `C:\Users\UserName\Documents\opencv\build`). Otherwise you will need to update the properties of the project so that it knows where OpenCV is on your machine.
 
